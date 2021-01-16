@@ -164,9 +164,9 @@ install(FILES ${CMAKE_BINARY_DIR}/Find${PROJECT_NAME}.cmake DESTINATION ${CMAKE_
 
 
 #target_compile_definitions(binBenchmark PRIVATE HASH=0xb2)
-add_executable(binBenchmark libCacheSim/benchmark/main.c)
-target_link_libraries(binBenchmark benchmark cache evictionAlgo traceReader profiler dataStructure traceStat utils
-        ${LIBS})
+# add_executable(binBenchmark libCacheSim/benchmark/main.c)
+# target_link_libraries(binBenchmark benchmark cache evictionAlgo traceReader profiler dataStructure traceStat utils
+#         ${LIBS})
 
 add_executable(exec libCacheSim/exec/main.c)
 target_link_libraries(exec cache evictionAlgo traceReader profiler dataStructure traceStat utils
