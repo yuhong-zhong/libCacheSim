@@ -168,6 +168,10 @@ add_executable(binBenchmark libCacheSim/benchmark/main.c)
 target_link_libraries(binBenchmark benchmark cache evictionAlgo traceReader profiler dataStructure traceStat utils
         ${LIBS})
 
+add_executable(exec libCacheSim/exec/main.c)
+target_link_libraries(exec cache evictionAlgo traceReader profiler dataStructure traceStat utils
+        ${LIBS})
+
 #add_executable(binDebug ../test/debug.c)
 #target_link_libraries(binDebug cache evictionAlgo traceReader profiler dataStructure traceStat utils m ${LIBS} ${CMAKE_THREAD_LIBS_INIT} -lpthread -ldl)
 #set_property(TARGET binDebug PROPERTY C_STANDARD 11)
