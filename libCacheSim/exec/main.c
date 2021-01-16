@@ -73,4 +73,6 @@ int main(int argc, char *argv[]) {
       break;
     }
   }
+
+  printf("miss ratio: %f\n", (float)(miss_count) / (float)(req_count));
 }
