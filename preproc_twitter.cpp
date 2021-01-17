@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
         fprintf(output_fp, ",");
       }
       if (token_index == 1) {
-        std::string key(buf);
+        std::string key(token);
         if (id_map.find(key) != id_map.end()) {
           fprintf(output_fp, "%ld", id_map.at(key));
         } else {
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
           ++max_id;
         }
       } else {
-        fprintf(output_fp, "%s", buf);
+        fprintf(output_fp, "%s", token);
       }
 
       token = strtok(NULL, ",");
