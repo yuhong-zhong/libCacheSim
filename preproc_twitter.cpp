@@ -58,7 +58,6 @@ int main(int argc, char *argv[]) {
       token = strtok(NULL, ",");
       ++token_index;
     }
-    fprintf(output_fp, "\n");
   }
 }
 
