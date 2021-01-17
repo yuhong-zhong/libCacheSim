@@ -69,15 +69,15 @@ int main(int argc, char *argv[]) {
     }
 
     ++cur_line;
-    if (cur_line >= num_lines) {
+    if (num_lines > 0 && cur_line >= num_lines) {
       break;
     }
 
-    if (cur_line % 1000000) {
-      printf("cur_line: %ld\r", cur_line);
+    if (cur_line % 1000000 == 0) {
+      fprintf(stderr, "cur_line: %ld\r", cur_line);
     }
   }
-  printf("\n");
+  fprintf(stderr, "\n");
 
-  printf("miss ratio: %f\n", (float)(miss_count) / (float)(req_count));
+  printf("%f\n", (float)(miss_count) / (float)(req_count));
 }
