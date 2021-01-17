@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
       if (token_index == 0) {
         sscanf(token, "%ld", &req->real_time);
       } else if (token_index == 1) {
-        req->obj_id_int = g_quark_from_string(token);
+        sscanf(token, "%ld", &req->obj_id_int);
       } else if (token_index == 2) {
         size_t key_size;
         sscanf(token, "%ld", &key_size);
