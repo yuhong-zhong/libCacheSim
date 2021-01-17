@@ -1,5 +1,6 @@
 #include "stdlib.h"
 #include "stdio.h"
+#include "string.h"
 #include <unordered_map>
 #include <string>
 
