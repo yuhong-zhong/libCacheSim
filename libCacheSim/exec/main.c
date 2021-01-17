@@ -72,7 +72,12 @@ int main(int argc, char *argv[]) {
     if (cur_line >= num_lines) {
       break;
     }
+
+    if (cur_line % 1000000) {
+      printf("cur_line: %ld\r", cur_line);
+    }
   }
+  printf("\n");
 
   printf("miss ratio: %f\n", (float)(miss_count) / (float)(req_count));
 }
