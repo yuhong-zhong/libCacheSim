@@ -43,17 +43,13 @@ int main(int argc, char *argv[]) {
     int token_index = 0;
     while (token != NULL) {
       if (token_index == 0) {
-        sscanf(token, "%ld", &req->real_time);
+        req->real_time = atol(token);
       } else if (token_index == 1) {
-        sscanf(token, "%ld", &req->obj_id_int);
+        req->obj_id_int = atol(token);
       } else if (token_index == 2) {
-        size_t key_size;
-        sscanf(token, "%ld", &key_size);
-        req->obj_size += key_size;
+        req->obj_size += atol(token);
       } else if (token_index == 3) {
-        size_t value_size;
-        sscanf(token, "%ld", &value_size);
-        req->obj_size += value_size;
+        req->obj_size += atol(token);
       }
 
       token = strtok(NULL, ",");
