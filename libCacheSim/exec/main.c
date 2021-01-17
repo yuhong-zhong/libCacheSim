@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
   long cache_size;
-  sscanf(argv[2], "%ld", &cache_size);
+  sscanf(argv[1], "%ld", &cache_size);
 
   common_cache_params_t cc_params = {.cache_size=cache_size, .default_ttl=0};
   cache_t* lru = LRU_init(cc_params, NULL);
